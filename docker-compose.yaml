@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+  reverse-proxy:
+    image: caddy:latest
+    ports:
+      - 8000:8000
+    volumes:
+      - $PWD/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/frontend:/var/www/

@@ -1,0 +1,10 @@
+:8000 {
+  handle_path /api/* {
+    reverse_proxy http://host.docker.internal:3000
+  }
+
+  handle_path /* {
+    root * /var/www
+    file_server
+  }
+}

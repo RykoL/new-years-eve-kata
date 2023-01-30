@@ -1,0 +1,90 @@
+html {
+   font-size: 16px;
+}
+
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        to top left
+        ,rgb(140, 18, 130),
+        25%,
+        rgba(207, 17, 36, .9),
+        70%, rgb(252, 144, 3)
+    );
+    font-family: Helvetica, Arial;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+h1.main-heading {
+    color: white;
+    margin-top: 0;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 1rem;
+    text-shadow: 0rem 0rem 1rem white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.secondary-heading {
+    color: white;
+    margin-top: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0rem 0rem 1rem white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    max-width: 100vw;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .5);
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus input[type="text"]:focus-visible {
+    border: 1px solid rgba(0, 0, 0, .5);
+    outline: none;
+}
+
+.button {
+    font-size: 1.25rem;
+    padding: 1rem;
+    background: rgba(20, 17, 21, 0.75);
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.clear-link {
+    text-decoration: none;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            New Year's eve wishes
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!-- Place favicon.ico in the root directory -->
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            your experience.
+            </p>
+        <![endif]-->
+        <main>
+
+            <h1 class="main-heading">Submit your wishes</h1>
+            <form>
+                <input type="text" name="wish" required minlength='1' placeholder="Your wish"/>
+                <button class="button">Submit Wish</button>
+            </form>
+            <h2 class="secondary-heading">OR</h2>
+            <a href="explore.html" class="button clear-link">Explore wishes</a>
+        </main>
+        <script type="module">
+         import { submitNewYearsWish } from './wishes.js'
+
+         const onSubmitWish = (evt) => {
+             evt.preventDefault()
+             const wishInput = document.querySelector('input[name="wish"]')
+
+             submitNewYearsWish(wishInput.value).then(() => console.log("f0ck"))
+         }
+
+         const submitButton = document.querySelector('button')
+         submitButton.addEventListener('click', onSubmitWish);
+        </script>
+    </body>
+</html>

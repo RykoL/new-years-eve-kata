@@ -1,0 +1,5 @@
+**/*.tfstate*
+**/.terraform
+api/
+backend/new-years-eve
+.env
