@@ -39,7 +39,7 @@
              evt.preventDefault()
              const wishInput = document.querySelector('input[name="wish"]')
 
-             submitNewYearsWish(wishInput.value).then(() => console.log("f0ck"))
+             submitNewYearsWish(wishInput.value).then(() => wishInput.value = '')
          }
 
          const submitButton = document.querySelector('button')

@@ -88,3 +88,28 @@ input[type="text"]:focus input[type="text"]:focus-visible {
 .clear-link {
     text-decoration: none;
 }
+
+.wish-card {
+    background: rgba(20, 17, 21, 0.6);
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    padding: 1.5rem;
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.explore-main {
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.explore-main * {
+    min-width: 80%;
+    max-width: 80%;
+}

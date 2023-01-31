@@ -1,6 +1,5 @@
 EXECUTABLE=new-years-eve
 
-
 .PHONY=clean start
 
 ## Application
@@ -14,7 +13,7 @@ start:
 deploy: clean
 	cd backend && $(MAKE) prepare-for-deployment
 	mv backend/api .
-	cd infrastructure && $(MAKE) deploy
+	cd infrastructure && VERCEL_API_TOKEN=$(VERCEL_API_TOKEN) $(MAKE) deploy
 
 clean:
 	rm -rf api || true

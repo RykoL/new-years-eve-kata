@@ -21,10 +21,20 @@
             </p>
         <![endif]-->
         <h1 class="main-heading">Explore wishes</h1>
+        <main class="explore-main">
+        </main>
         <script type="module">
+         import { WishCard } from './card.js'
          import { getAllWishes } from './wishes.js'
 
-         getAllWishes().then(console.log)
+         getAllWishes().then(wishes => {
+             const container = document.querySelector("main")
+             wishes.map(wish => {
+                 const card = document.createElement('wish-card')
+                 card.setAttribute('message', wish.message)
+                 return card
+             }).forEach(c => container.append(c))
+         })
         </script>
     </body>
 </html>
